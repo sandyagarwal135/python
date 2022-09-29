@@ -1,20 +1,13 @@
-import pandas as pd
-import sec
-s = pd.Series([1, 3, 5, 6, 8])
-tt ='sandeep'
+a = dict({1: 'Web', 2: 'Java', 3: 'Database', 4: 'Ruby'})
 
+for i, j in a.items():
+    print(i, " ", j)
 
-def printing():
-    print("Jai")
-def adding(a, b):
-    return a+b
-if __name__ == '__main__':
-    # print(tt)
-    # printing()
-    # dates = pd.date_range("20130101", periods=6)
-    # print(dates)
-    # print("dates")
-    # c=adding(4,88)
-    # print(c)
-    hello()
-
+for i in a:
+    print(i, a[i])
+    dict1 = {'India': 'NewDelhi', 'UK':'London', 'Japan': 'Tokyo'}
+    >> > print(dict1)  # Display the dictionary
+    {'India': 'NewDelhi', 'UK': 'London', 'Japan':
+        'Tokyo'}
+    >> > series8 = pd.Series(dict1)
+    >> > print(series8)  # Display the series
