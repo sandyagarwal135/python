@@ -1,17 +1,16 @@
 import pandas as pd
 import numpy as np
+# s1=pd.Series()
+# print(s1.empty)
+# s1=pd.Series(Empty)
 #
+# b=[4,6,8,55]
+# # s1=pd.Series(b)
+# # print(s1)
+
 # s1=pd.Series([4,6,8,55])
 # print(s1)
-# a=[4,6,8,55]
-# s1=pd.Series(a)
-# print(s1)
-# a=[4,6,8,55]
-# s1=pd.Series([4,6,8,10])
-# print(s1)
-#
-# s1=pd.Series((48,86,88,55))
-# print(s1)
+
 #
 # s1=pd.Series(['o','h','o'])
 # print(s1)
@@ -21,8 +20,8 @@ import numpy as np
 
 # s1=pd.Series(["I","am","Sorry"])
 # print(s1)
-
-# nda=np.arange(2,22,2)
+#
+# nda=np.arange(2,22,1)
 # print(nda)
 # s1=pd.Series(nda)
 # print(s1)
@@ -41,14 +40,14 @@ import numpy as np
 # s1=pd.Series(MedalsWon)
 # print(s1)
 #
-# MedalsWon=pd.Series(15,index=range(1,6,2))
+# MedalsWon=pd.Series(range(1,6,1))
 # s1=pd.Series(MedalsWon)
 # print(s1)
 
 # MedalsWon=pd.Series(15,['a','b'])
 # s1=pd.Series(MedalsWon)
 # print(s1)
-
+#
 # s1=pd.Series((48,np.NAN,88,55))
 # print(s1)
 
@@ -58,12 +57,12 @@ import numpy as np
 # s1=pd.Series(xx)
 # print(s1)
 # from pandas.tests.extension.conftest import data
-
+#
 # va=[4,6,8,55,88]
 # san=['o','h','o','y','b']
-# # s1=pd.Series(san,va)
-# # print(s1)
-# s1=pd.Series(index=san,data=va)
+# s1=pd.Series(va,san)
+# print(s1)
+# s1=pd.Series(data=va,index=san)
 # print(s1)
 
 #
@@ -92,7 +91,10 @@ import numpy as np
 
 # va=[4,6,8,55,88,77]
 # san=['o','h','o','y','b',np.NaN]
+#
 # s1=pd.Series(data= san,index=va,name='myseries')
+# print(s1)
+# print(s1.values.itemsize)
 # print(s1.name)
 # print(s1.empty)
 # print(s1.hasnans)
@@ -104,7 +106,7 @@ import numpy as np
 # print(s1.shape)
 # print(s1.nbytes)
 # print(s1.ndim)
-# print(s1.values.itemsize)
+
 
 
 
@@ -147,18 +149,20 @@ import numpy as np
 # s1.index=['oy','hh','oo','yy','bb','tt']
 # print(s1)
 
-# --Demo
-# va=[4,6,8,55,88,77,4,4,4,4,4,4,4,3,5,44,4,4,3,66,66,6,6,6,5,5,5,5]
+# # --Demo
+# va=[4,6,8,55,88,77,4,4]
+# v1=[4,6,8,55,88,77,4,4]*2
+# # print(v1)
 # s1=pd.Series(data=va, name='myseries')
-# # a=(s1.values)
+# a=(s1.values)
 # print(s1+2)
 # print(s1)
 
-# va=[4,6,8,55,88,77,4,4,4,4,4,4,4,3]
-# va1=[5,44,4,4,3,66,66,6,6,6,5,5]
-# s1=pd.Series(data=va, name='myseries')
-# s2=pd.Series(data=va1, name='myseries1')
-# print(s1+s2)
+va=[4,6,8,55,88,77,4,4,4,4,4,4,4,3]
+va1=[5,44,4,4,3,66,66,6]
+s1=pd.Series(data=va, name='myseries')
+s2=pd.Series(data=va1, name='myseries1')
+print(s1+s2)
 
 # va=[4,6,8]
 # va1=[5,44,4]
@@ -176,7 +180,7 @@ import numpy as np
 # s2=pd.Series(data=AvgIncome,index=vaidx, name='AvgIncome')
 # print(s2/s1)
 
-#
+
 # vaidx=['Pune','Mimbai','Bpl']
 # AvgIncome=[3432435,432324344,342344]
 # s2=pd.Series(data=AvgIncome,index=vaidx, name='AvgIncome')

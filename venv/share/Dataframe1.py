@@ -9,7 +9,7 @@ import numpy as np
 # dFlistDict=pd.DataFrame(Dict,index=['I','II','III'])
 # print(dFlistDict)
 
-#21
+# 21
 # Dict21 = {'Section':['A','B','C'], 'Contri':[2330,5530,5540]}
 # dFlistDict21=pd.DataFrame(Dict21)
 # print(dFlistDict21)
@@ -60,7 +60,7 @@ import numpy as np
 # dFlistDict22=pd.DataFrame(narr)
 # print(narr)
 # narr=np.array([[1,23,4],[3,4,6]],np.int32)
-# dFlistDict22=pd.DataFrame(narr,columns=['One','Two','THree'],index=['A','B'])
+# dFlistDict22=pd.DataFrame(data=narr,columns=['One','Two','THree'],index=['A','B'])
 # print(dFlistDict22)
 
 # listDict = [{'a':10, 'b':20}, {'a':5, 'b':10, 'c':20}]
@@ -91,6 +91,7 @@ import numpy as np
 
 # Dict = {'Student':['San','Raj','Ram'], 'Marks':[20,30,40],'Games':['Cricket','Hockey','Football']}
 # dFlistDict=pd.DataFrame(Dict,index=['I','II','III'])
+# print(dFlistDict)
 # print(dFlistDict.index)
 # print(dFlistDict.columns)
 # print(dFlistDict.axes)
@@ -108,9 +109,12 @@ import numpy as np
 # print(Ser1)
 
 # Population, Hospital, School
-# aa=[['34324324','KEM','MKNS'],['34324','Nuri','DPS'],['34324324','Ruby','Modal'],['34324','ABC','DonBosco']]
+aa=[['34324324','KEM','MKNS'],['34324','Nuri','DPS'],['34324324','Ruby','Modal'],['34324','ABC','DonBosco']]
 # df=pd.DataFrame(aa,columns=['Population','Hospital','School'],index=['Pune','Indore','Bhopal','Mumbai'])
-# # print(df.loc[['Indore','Bhopal'],['Population','Hospital']])
+df=pd.DataFrame(aa,columns=['Population','Hospital','School'])
+print(df)
+print(df.loc[[0,2],['Population','Hospital']])
+# print(df.loc[['Indore','Bhopal'],['Population','Hospital']])
 # df.Population[1]=5555
 # print(df)
 # print(df.Population[1])
@@ -158,19 +162,19 @@ import numpy as np
 # print(dFrameEmt.loc[:10,'Price':'EuroPrice'])
 # print(data.Brand[2])
 #
-aa=[[33,133],[44,-33]]
-df=pd.DataFrame(aa,columns=['C1','C2'],index=['R1','R2'])
-df['New']=99
-df['New1']=[199,33]
-df.at['R3',:]=160
-print(df)
-# df.at['R4',:]=[199,33]
-print(df)
-del df['C1']
-print(df)
-df=df.drop(['R1'])
-print(df)
-# print(df>0)
+# aa=[[33,133],[44,-33]]
+# df=pd.DataFrame(aa,columns=['C1','C2'],index=['R1','R2'])
+# df['New']=99
+# df['New1']=[199,33]
+# df.at['R3',:]=160
+# print(df)
+# # df.at['R4',:]=[199,33]
+# print(df)
+# del df['C1']
+# print(df)
+# df=df.drop(['R1'])
+# print(df)
+# # print(df>0)
 
 
 # print(df['C2']>10)
